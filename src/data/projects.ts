@@ -6,10 +6,4 @@ export const projects = [
     tech: ["React", "Node.js", "GitHub API"],
     href: "https://classmoji.io",
   },
-  {
-    name: "Sprout",
-    description:
-      "An iOS health tracking app that makes habit-building feel engaging through gentle gamification and thoughtful design.",
-    tech: ["SwiftUI", "Firebase", "SpriteKit"],
-  },
 ];
