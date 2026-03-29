@@ -1,23 +1,24 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BookEntry from "../components/BookEntry.astro";
-import { currentlyReading, wantToRead } from "../data/books";
+import { currentlyReading, nerdStuff, everythingElse } from "../data/books";
 ---
 
 <BaseLayout title="Reading — Pape Sow Traore">
-  <h1 class="text-xl font-medium text-neutral-900 mb-8">Reading</h1>
-
-  <section class="mb-10">
-    <h2 class="text-sm uppercase tracking-widest text-neutral-600 mb-4">
-      Currently Reading
-    </h2>
+<section class="mb-10">
+    <h2 class="text-sm uppercase tracking-widest text-neutral-600 mb-4">Currently Reading</h2>
     {currentlyReading.map((b) => <BookEntry {...b} />)}
   </section>
 
-  <section>
-    <h2 class="text-sm uppercase tracking-widest text-neutral-600 mb-4">
-      Want to Read
-    </h2>
-    {wantToRead.map((b) => <BookEntry {...b} />)}
+  <section class="mb-10">
+    <h2 class="text-sm uppercase tracking-widest text-neutral-600 mb-4">Nerd Stuff 🤓</h2>
+    {nerdStuff.map((b) => <BookEntry {...b} />)}
   </section>
+
+  {everythingElse.length > 0 && (
+    <section>
+      <h2 class="text-sm uppercase tracking-widest text-neutral-600 mb-4">Everything Else</h2>
+      {everythingElse.map((b) => <BookEntry {...b} />)}
+    </section>
+  )}
 </BaseLayout>

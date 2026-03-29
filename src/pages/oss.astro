@@ -1,0 +1,9 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import OSSEntry from "../components/OSSEntry.astro";
+import { oss } from "../data/oss";
+---
+
+<BaseLayout title="OSS — Pape Sow Traore">
+  {oss.map((item) => <OSSEntry {...item} />)}
+</BaseLayout>

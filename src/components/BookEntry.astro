@@ -9,7 +9,7 @@ interface Props {
 const { title, author, href, note } = Astro.props;
 ---
 
-<div class="py-3">
+<div class="py-1">
   {href ? (
     <a href={href} target="_blank" rel="noopener noreferrer" class="text-base text-neutral-900 hover:underline">{title}</a>
   ) : (

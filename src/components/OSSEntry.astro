@@ -1,0 +1,14 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  href: string;
+}
+
+const { name, description, href } = Astro.props;
+---
+
+<div class="py-2">
+  <a href={href} target="_blank" rel="noopener noreferrer" class="text-base text-neutral-900 underline">{name}</a>
+  <span class="text-base text-neutral-600"> — {description}</span>
+</div>

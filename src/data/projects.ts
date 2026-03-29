@@ -4,7 +4,7 @@ export const projects = [
     description:
       "An open-source, GitHub-native learning management system that brings course management directly into the developer workflow.",
     tech: ["React", "Node.js", "GitHub API"],
-    href: "https://github.com/pape98",
+    href: "https://classmoji.io",
   },
   {
     name: "Sprout",
