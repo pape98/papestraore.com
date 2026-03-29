@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  author: string;
+  href?: string;
+  note?: string;
+}
+
+const { title, author, href, note } = Astro.props;
+---
+
+<div class="py-3">
+  {href ? (
+    <a href={href} target="_blank" rel="noopener noreferrer" class="text-base text-neutral-900 hover:underline">{title}</a>
+  ) : (
+    <span class="text-base text-neutral-900">{title}</span>
+  )}
+  <span class="text-base text-neutral-600"> — {author}</span>
+  {note && <p class="text-base text-neutral-600 mt-0.5">{note}</p>}
+</div>

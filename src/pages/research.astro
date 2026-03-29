@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PublicationEntry from "../components/PublicationEntry.astro";
+import { papers } from "../data/research";
+---
+
+<BaseLayout title="Research — Pape Sow Traore">
+  <h1 class="text-xl font-medium text-neutral-900 mb-8">Research</h1>
+  {papers.map((p) => <PublicationEntry {...p} />)}
+</BaseLayout>

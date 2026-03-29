@@ -1,0 +1,20 @@
+---
+const links = [
+  { href: "https://github.com/pape98", label: "GitHub" },
+  { href: "https://linkedin.com/in/papesowtraore", label: "LinkedIn" },
+  { href: "mailto:papisline2222@gmail.com", label: "Email" },
+];
+---
+
+<div class="flex gap-4">
+  {links.map(({ href, label }) => (
+    <a
+      href={href}
+      target={href.startsWith("mailto") ? undefined : "_blank"}
+      rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+      class="text-base text-neutral-600 hover:text-neutral-900 transition-colors"
+    >
+      {label}
+    </a>
+  ))}
+</div>

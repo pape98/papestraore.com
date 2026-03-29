@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BookEntry from "../components/BookEntry.astro";
+import { currentlyReading, wantToRead } from "../data/books";
+---
+
+<BaseLayout title="Reading — Pape Sow Traore">
+  <h1 class="text-xl font-medium text-neutral-900 mb-8">Reading</h1>
+
+  <section class="mb-10">
+    <h2 class="text-sm uppercase tracking-widest text-neutral-600 mb-4">
+      Currently Reading
+    </h2>
+    {currentlyReading.map((b) => <BookEntry {...b} />)}
+  </section>
+
+  <section>
+    <h2 class="text-sm uppercase tracking-widest text-neutral-600 mb-4">
+      Want to Read
+    </h2>
+    {wantToRead.map((b) => <BookEntry {...b} />)}
+  </section>
+</BaseLayout>

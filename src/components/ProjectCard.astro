@@ -1,0 +1,32 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  tech: string[];
+  href?: string;
+}
+
+const { name, description, tech, href } = Astro.props;
+---
+
+<div class="py-5">
+  <div class="flex items-baseline justify-between gap-4 mb-1">
+    <span class="text-base font-medium text-neutral-900">{name}</span>
+    {href && (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm text-neutral-600 hover:text-neutral-700 transition-colors shrink-0"
+      >
+        ↗
+      </a>
+    )}
+  </div>
+  <p class="text-base text-neutral-600 mb-3">{description}</p>
+  <div class="flex flex-wrap gap-2">
+    {tech.map((tag) => (
+      <span class="text-sm text-neutral-600">{tag}</span>
+    ))}
+  </div>
+</div>
