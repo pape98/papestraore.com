@@ -55,4 +55,19 @@ export const everythingElse = [
     author: "DK",
     href: "https://www.amazon.com/History-World-Map-DK/dp/0744084962",
   },
+  {
+    title: "The Little Prince",
+    author: "Antoine de Saint-Exupéry",
+    href: "https://www.amazon.com/Little-Prince-Antoine-Saint-Exup%C3%A9ry/dp/0156012197",
+  },
+  {
+    title: "The Murder of Roger Ackroyd",
+    author: "Agatha Christie",
+    href: "https://www.amazon.com/Murder-Roger-Ackroyd-paperback/dp/1648337546",
+  },
+  {
+    title: "The Mysterious Affair at Styles",
+    author: "Agatha Christie",
+    href: "https://www.amazon.com/Mysterious-Affair-Styles-Hercule-Classics/dp/1734452595",
+  },
 ];

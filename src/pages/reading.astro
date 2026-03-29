@@ -5,7 +5,8 @@ import { currentlyReading, nerdStuff, everythingElse } from "../data/books";
 ---
 
 <BaseLayout title="Reading — Pape Sow Traore">
-<section class="mb-10">
+  <p class="text-base text-neutral-600 mb-10">Books I love, am reading, or keep meaning to finish. Mostly nerd stuff but I have range.</p>
+  <section class="mb-10">
     <h2 class="text-sm uppercase tracking-widest text-neutral-600 mb-4">Currently Reading</h2>
     {currentlyReading.map((b) => <BookEntry {...b} />)}
   </section>
